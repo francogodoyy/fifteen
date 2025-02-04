@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import Particles from "./GenerateParticles";
 import { FaRegHeart, FaCameraRetro } from "react-icons/fa";
 
-
 const photos = [
   { src: "/images/image1.jpg", width: 800, height: 600 },
   { src: "/images/image2.jpg", width: 800, height: 600 },
@@ -33,8 +32,8 @@ const InvitationPage = () => {
   const Footer = () => {
     return (
       <footer className="bg-rose-200 text-gray-800 text-center py-6 mt-10 shadow-inner">
-        <p className="text-xl font-semibold">Con cariño,</p>
-        <p className="text-2xl font-bold text-rose-500">Familia de Zoe</p>
+        <p className="text-lg sm:text-xl font-semibold">Con cariño,</p>
+        <p className="text-xl sm:text-2xl font-bold text-rose-500">Familia de Zoe</p>
       </footer>
     );
   };
@@ -50,75 +49,75 @@ const InvitationPage = () => {
           backgroundImage: "url('images/fondo.png')",
         }}
       ></header>
-<div className="w-full bg-rose-100 py-8">
-  <div className="max-w-7xl mx-auto px-4">
-    <Countdown
-      date={eventDate}
-      renderer={({ days, hours, minutes, seconds }) => (
-        <div className="flex justify-center space-x-12 text-gray-800">
-          <div className="flex flex-col items-center">
-            <span className="text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
-              {days}
-            </span>
-            <span className="text-2xl font-semibold mt-2 text-gray-600">
-              Días
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
-              {hours}
-            </span>
-            <span className="text-2xl font-semibold mt-2 text-gray-600">
-              Horas
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
-              {minutes}
-            </span>
-            <span className="text-2xl font-semibold mt-2 text-gray-600">
-              Minutos
-            </span>
-          </div>
-          <div className="flex flex-col items-center">
-            <span className="text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
-              {seconds}
-            </span>
-            <span className="text-2xl font-semibold mt-2 text-gray-600">
-              Segundos
-            </span>
-          </div>
-        </div>
-      )}
-    />
-  </div>
-</div>
 
+      {/* Countdown Section */}
+      <div className="w-full bg-rose-100 py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <Countdown
+            date={eventDate}
+            renderer={({ days, hours, minutes, seconds }) => (
+              <div className="flex flex-wrap justify-center gap-4 sm:gap-12 text-gray-800">
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl sm:text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
+                    {days}
+                  </span>
+                  <span className="text-lg sm:text-2xl font-semibold mt-2 text-gray-600">
+                    Días
+                  </span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl sm:text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
+                    {hours}
+                  </span>
+                  <span className="text-lg sm:text-2xl font-semibold mt-2 text-gray-600">
+                    Horas
+                  </span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl sm:text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
+                    {minutes}
+                  </span>
+                  <span className="text-lg sm:text-2xl font-semibold mt-2 text-gray-600">
+                    Minutos
+                  </span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-4xl sm:text-7xl font-bold text-rose-500 drop-shadow-lg font-['Playfair_Display']">
+                    {seconds}
+                  </span>
+                  <span className="text-lg sm:text-2xl font-semibold mt-2 text-gray-600">
+                    Segundos
+                  </span>
+                </div>
+              </div>
+            )}
+          />
+        </div>
+      </div>
 
       {/* Sección de detalles del evento */}
       <section
-        className="relative bg-cover bg-center bg-no-repeat h-screen flex items-center justify- z-10"
+        className="relative bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center z-10"
         style={{
           backgroundImage: "url('images/image4.jpg')",
         }}
       >
         <motion.div
-          className="bg-white shadow-lg p-10 max-w-xl w-full mx-auto text-gray-800 rounded-lg flex flex-col items-center text-center"
+          className="bg-white shadow-lg p-6 sm:p-10 max-w-md sm:max-w-xl w-full mx-4 sm:mx-auto text-gray-800 rounded-lg flex flex-col items-center text-center"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          {/* Contenedor del corazón */}
           <div className="w-full flex justify-center">
-            <FaRegHeart className="text-rose-300 text-6xl mb-4" />
+            <FaRegHeart className="text-rose-300 text-4xl sm:text-6xl mb-4" />
           </div>
 
-          <h2 className="text-3xl font-bold mb-6 text-rose-300">Celebración</h2>
-          <p className="text-lg mb-1">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-rose-300">Celebración</h2>
+          <p className="text-base sm:text-lg mb-1">
             La fiesta será el día <strong>viernes 8 de Marzo</strong>.
           </p>
-          <p className="text-lg mb-7">
+          <p className="text-base sm:text-lg mb-7">
             Los espero a las <strong>21:00 hs</strong> en{" "}
             <strong>Centro Empleado de Comercio</strong>, salón ubicado en Mitre 266,
             Resistencia, Chaco.
@@ -135,10 +134,10 @@ const InvitationPage = () => {
       </section>
 
       {/* Sección de fotos */}
-      <section className="relative py-16 text-center bg-rose-100 text-center z-10">
+      <section className="relative py-16 text-center bg-rose-100 z-10">
         <div className="w-full flex justify-center z-10">
-          <FaCameraRetro className="text-rose-300 text-4xl mb-4" />
-          <h2 className="text-3xl font-bold mb-4 text-rose-300">
+          <FaCameraRetro className="text-rose-300 text-3xl sm:text-4xl mb-4" />
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-rose-300">
             Momentos Especiales
           </h2>
         </div>
@@ -169,19 +168,18 @@ const InvitationPage = () => {
         }}
       >
         <motion.div
-          className="bg-white shadow-lg p-10 max-w-xl w-full mx-auto text-gray-800 rounded-lg flex flex-col items-center text-center z-10"
+          className="bg-white shadow-lg p-6 sm:p-10 max-w-md sm:max-w-xl w-full mx-4 sm:mx-auto text-gray-800 rounded-lg flex flex-col items-center text-center z-10"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
-          {/* Corazón centrado */}
-          <FaRegHeart className="text-rose-300 text-6xl mb-6" />
+          <FaRegHeart className="text-rose-300 text-4xl sm:text-6xl mb-6" />
 
-          <h2 className="text-3xl font-bold mb-6 text-rose-300">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-rose-300">
             Confirmar Asistencia
           </h2>
-          <p className="text-lg mb-7">
+          <p className="text-base sm:text-lg mb-7">
             Por favor confirma tu asistencia antes del{" "}
             <strong>8 de marzo</strong>.
           </p>
