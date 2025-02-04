@@ -184,7 +184,7 @@ const InvitationPage = () => {
             <strong>8 de marzo</strong>.
           </p>
           <a
-            href="https://wa.me/3624895561/?text=Voy a ir! "
+            href="https://wa.me/5493624895561/?text=Voy a ir! "
             target="_blank"
             rel="noopener noreferrer"
             className="bg-pink-400 text-white font-semibold px-4 py-2 rounded-lg shadow-lg hover:bg-pink-500 transition"
